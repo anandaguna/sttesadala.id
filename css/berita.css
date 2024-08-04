@@ -1,0 +1,58 @@
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+.berita-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+}
+
+.berita-item {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.berita-item:hover {
+    transform: scale(1.05);
+}
+
+.berita-item h3 {
+    color: #cbc857;
+    font-size: 14px;
+}
+
+.berita-item img {
+    width: 3cm;
+    height: 3cm;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.berita-item a {
+    text-decoration: none;
+    color: #575334;
+    font-weight: bold;
+}
+
+.berita-item a:hover {
+    color: #cbc857;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+section {
+    animation: fadeIn 2s ease-in-out;
+}

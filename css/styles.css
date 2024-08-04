@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e9e834;
+    color: #575334;
+}
+
+header {
+    background-color: #cbc857;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.logo {
+    width: 50px;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+}
+
+nav {
+    background-color: #cbc857;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    opacity: 0; /* Initial state for animation */
+    transform: translateY(-20px); /* Initial state for animation */
+    animation: fadeInMoveDown 0.5s forwards; /* Animation */
+}
+
+nav ul li:nth-child(1) {
+    animation-delay: 0.1s; /* Delay for sequential animation */
+}
+nav ul li:nth-child(2) {
+    animation-delay: 0.2s;
+}
+nav ul li:nth-child(3) {
+    animation-delay: 0.3s;
+}
+nav ul li:nth-child(4) {
+    animation-delay: 0.4s;
+}
+nav ul li:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 14px 20px;
+    text-decoration: none;
+    color: #575334;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    background-color: #575334;
+    color: #cbc857;
+}
+
+footer {
+    background-color: #cbc857;
+    color: #575334;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+@keyframes fadeInMoveDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
